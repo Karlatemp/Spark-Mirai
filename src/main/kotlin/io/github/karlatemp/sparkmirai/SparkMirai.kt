@@ -9,9 +9,6 @@ import net.mamoe.mirai.console.command.CommandManager.INSTANCE.register
 import net.mamoe.mirai.console.command.CommandSender
 import net.mamoe.mirai.console.command.ConsoleCommandSender
 import net.mamoe.mirai.console.command.UserCommandSender
-import net.mamoe.mirai.console.permission.Permission
-import net.mamoe.mirai.console.permission.PermissionId
-import net.mamoe.mirai.console.permission.PermissionService
 import net.mamoe.mirai.console.plugin.jvm.JvmPlugin
 import net.mamoe.mirai.console.plugin.jvm.JvmPluginDescriptionBuilder
 import net.mamoe.mirai.console.plugin.jvm.KotlinPlugin
@@ -25,7 +22,7 @@ import java.util.stream.Stream
 
 @AutoService(JvmPlugin::class)
 object SparkMirai : KotlinPlugin(
-    JvmPluginDescriptionBuilder("spark", "1.0.0")
+    JvmPluginDescriptionBuilder("spark", "1.4.3")
         .id("spark.spark.spark").build()
 ), SparkPlugin {
     private lateinit var platform: SparkPlatform
