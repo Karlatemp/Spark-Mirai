@@ -69,7 +69,7 @@ object SparkMirai : KotlinPlugin(
 
     override fun getSendersWithPermission(permission: String?):
             Stream<out me.lucko.spark.common.command.sender.CommandSender> {
-        return Stream.of(MiraiCommandSender(ConsoleCommandSender.INSTANCE))
+        return Stream.of(MiraiCommandSender(ConsoleCommandSender))
     }
 
     private val services = Executors.newScheduledThreadPool(5, object : ThreadFactory {
